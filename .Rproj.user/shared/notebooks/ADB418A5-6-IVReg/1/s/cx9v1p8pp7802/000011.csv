@@ -1,0 +1,84 @@
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"0","DDCGdata <- haven::read_dta(""data/DDCGdata.dta"")"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"0","pdf <- pdata.frame(DDCGdata, index=c(""country_name"", ""year""))"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"0","rm(DDCGdata)"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"0","head(pdf)"

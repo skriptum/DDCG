@@ -1,0 +1,105 @@
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"0","SE1 <- SE_estimate"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"0","SE2 <- (SE1 * lag1) + SE_estimate"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"0","SE3 <- (SE2 * lag1) + (SE1 * lag2) + SE_estimate"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"0","SE4 <- (SE3 * lag1) + (SE2 * lag2) + (SE1 * lag3) + SE_estimate"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"0","SEs <- c(SE1, SE2, SE3, SE4)"

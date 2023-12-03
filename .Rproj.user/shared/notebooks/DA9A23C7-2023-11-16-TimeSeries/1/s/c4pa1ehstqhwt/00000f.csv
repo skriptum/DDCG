@@ -1,0 +1,1 @@
+"0","wagemodel1 <- plm(lwage ~ married + union + exper, data=wagepan.p, model=""pooling"")"

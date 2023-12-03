@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Empirical Economics with R"
+  search:
+    location: navbar
+    type: overlay
+  sidebar:
+    style: "docked"
+    contents:
+      - section: "Mitschriften"
+        contents: "/*"
+      - section: "Vortrag"
+        contents: "vortrag/*.qmd"
+  comments: 
+    hypothesis:
+      theme: clean
+      openSidebar: false
+
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    df-print: paged

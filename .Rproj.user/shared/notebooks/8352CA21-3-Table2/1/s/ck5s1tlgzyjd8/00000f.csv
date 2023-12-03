@@ -1,0 +1,84 @@
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"0","for (i in 9:30) {"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"0","  eff <- (effects[i-1] * lag1) + (effects[i-2] * lag2) + (effects[i-3] * lag3) + (effects[i-4] * lag4) + (effects[i-5] * lag5) + (effects[i-6] * lag6) + (effects[i-7] * lag7) + (effects[i-8] * lag8) + dem_shortrun"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"0","  effects <- c(effects, eff)"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"0","}"

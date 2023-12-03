@@ -1,0 +1,3 @@
+"0","ggplot(data=data, aes(x = logem4, y=logpgp95)) +"
+"0","    geom_point() + "
+"0","    geom_smooth(method=""lm"")"

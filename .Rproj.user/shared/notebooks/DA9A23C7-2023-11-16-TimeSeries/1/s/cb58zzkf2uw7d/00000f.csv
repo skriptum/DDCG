@@ -1,0 +1,2 @@
+"0","data(wagepan, package='wooldridge') # directly from package witoout loading"
+"0","head(wagepan)"

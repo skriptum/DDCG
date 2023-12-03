@@ -1,0 +1,10 @@
+"0","iv_model_4 <- plm("
+"0","    y ~ dem + plm::lag(y, 1:4) + rtrend2:rtrend7 | "
+"0","    plm::lag(demreg,1:4) + plm::lag(y, 1:4) + rtrend2:rtrend7,"
+"0","    data=pdf,"
+"0","    effect = ""twoways"","
+"0","    model = ""within"""
+"0","    )"
+"2","Error in plm(y ~ dem + plm::lag(y, 1:4) + rtrend2:rtrend7 | plm::lag(demreg,  : 
+  could not find function ""plm""
+"

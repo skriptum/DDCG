@@ -1,0 +1,8 @@
+"0","wagemodel2 <- plm(lwage ~ married + black + union + educ + exper, data=wagepan.p, model=""pooling"")"
+"2","Warning message:
+"
+"2","In if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"

@@ -1,0 +1,4 @@
+"0","startyear <- 1870"
+"0","year <- seq(from=startyear, to= 1987, by=1)"
+"0","data_GDP <- cbind(year, data) "
+"0","head(data_GDP) # new year column"

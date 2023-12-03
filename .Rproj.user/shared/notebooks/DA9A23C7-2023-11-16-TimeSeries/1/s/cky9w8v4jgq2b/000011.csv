@@ -1,0 +1,2 @@
+"0","data <- read.table(""data/Per_Capita_GDP_Data_1870-1987.asc"", header=T)"
+"0","head(data)"

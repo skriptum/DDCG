@@ -1,0 +1,330 @@
+library(tidyverse)
+library(plm)
+DDCGdata <- haven::read_dta("data/DDCGdata.dta")
+library(tidyverse)
+library(haven)
+library(AER)
+library(plm)
+DDCGdata <- read_dta("data/DDCGdata.dta")
+DDCGdata <- read_dta("data/DDCGdata.dta")
+df <- DDCGdata %>%
+dplyr::select(1:100) %>%
+dplyr::mutate(loggdp = log(gdppercapitaconstant2000us))
+rm(DDCGdata)
+pdf = pdata.frame(df, index=c("country_name", "year"))
+head(pdf)
+iv_model <- ivreg(
+y ~ dem + lag(y, 1) + lag(y, 2) + lag(y, 3) + lag(y, 4)+ factor(country_name) + factor(year) |
+lag(demreg,1) + lag(y, 1) + lag(y, 2) + lag(y, 3) + lag(y, 4)+ factor(country_name) + factor(year),
+data=pdf
+)
+summary(iv_model)
+iv_model <- ivreg(
+y ~ dem + lag(y, 1:4)+ factor(country_name) + factor(year) |
+lag(demreg,1:4) + lag(y, 1:4)+ factor(country_name) + factor(year),
+data=pdf
+)
+iv_model <- ivreg(
+y ~ dem + lag(y, 1:4)+ factor(country_name) + factor(year) |
+lag(demreg,1:4) + lag(y, 1:4)+ factor(country_name) + factor(year),
+data=pdf
+)
+iv_model <- AER::ivreg(
+y ~ dem + lag(y, 1:4)+ factor(country_name) + factor(year) |
+lag(demreg,1:4) + lag(y, 1:4)+ factor(country_name) + factor(year),
+data=pdf
+)
+iv_model <- ivreg::ivreg(
+y ~ dem + lag(y, 1:4)+ factor(country_name) + factor(year) |
+lag(demreg,1:4) + lag(y, 1:4)+ factor(country_name) + factor(year),
+data=pdf
+)
+iv_model <- ivreg::ivreg(
+y ~ dem + plm::lag(y, 1:4)+ factor(country_name) + factor(year) |
+plm::lag(demreg,1:4) + plm::lag(y, 1:4)+ factor(country_name) + factor(year),
+data=pdf
+)
+iv_model <- ivreg::ivreg(
+y ~ dem + plm::lag(y, 1:4)+ factor(country_name) + factor(year) |
+plm::lag(demreg,1:4) + plm::lag(y, 1:4) + factor(country_name) + factor(year),
+data=df
+)
+data("SchoolingReturns", package = "ivreg")
+View(SchoolingReturns)
+ivreg::ivreg(
+y ~ dem + plm::lag(y, 1:4)+ factor(country_name) + factor(year) |
+plm::lag(demreg,1:4) + plm::lag(y, 1:4) + factor(country_name) + factor(year),
+data=df
+)
+library(tidyverse)
+library(AER)
+iv_model <- ivreg(
+loggdp ~ dem + plm::lag(loggdp, 1:4)+ factor(country_name) + factor(year) |
+plm::lag(demreg,1:4) + plm::lag(loggdp, 1:4) + factor(country_name) + factor(year),
+data=pdf
+)
+library(ivreg)
+ivreg(
+y ~ dem + plm::lag(y, 1:4)+ factor(country_name) + factor(year) |
+plm::lag(demreg,1:4) + plm::lag(y, 1:4) + factor(country_name) + factor(year),
+data=df
+)
+library(tidyverse)
+library(tidyverse)
+library(ivreg)
+DDCGdata <- haven::read_dta("data/DDCGdata.dta")
+df <- DDCGdata %>%
+dplyr::select(1:100) %>%
+dplyr::mutate(loggdp = log(gdppercapitaconstant2000us))
+rm(DDCGdata)
+pdf = pdata.frame(df, index=c("country_name", "year"))
+ivreg(
+y ~ dem + plm::lag(y, 1:4)+ factor(country_name) + factor(year) |
+plm::lag(demreg,1:4) + plm::lag(y, 1:4) + factor(country_name) + factor(year),
+data=df
+)
+pdf = plm::pdata.frame(df, index=c("country_name", "year"))
+head(pdf)
+ivreg(
+y ~ dem + plm::lag(y, 1:4)+ factor(country_name) + factor(year) |
+plm::lag(demreg,1:4) + plm::lag(y, 1:4) + factor(country_name) + factor(year),
+data=pdf
+)
+ivreg(
+y ~ dem + plm::lag(y, 1:4)+ factor(country_name) + factor(year) |
+plm::lag(demreg,1) + plm::lag(y, 1:4) + factor(country_name) + factor(year),
+data=pdf
+)
+pdf <- plm::pdata.frame(df, index=c("country_name", "year"))
+head(pdf)
+ivreg(
+y ~ dem + plm::lag(y, 1:4)+ factor(country_name) + factor(year) |
+plm::lag(demreg,1) + plm::lag(y, 1:4) + factor(country_name) + factor(year),
+data=pdf
+)
+ivreg(
+y ~ dem + plm::lag(y, 1:4)+ factor(country_name) + factor(year) |
+plm::lag(demreg,1) + plm::lag(y, 1:4) + factor(country_name) + factor(year),
+data=pdf
+)
+library(tidyverse)
+library(tidyverse)
+library(ivreg)
+library(plm)
+DDCGdata <- haven::read_dta("data/DDCGdata.dta")
+df <- DDCGdata %>%
+dplyr::select(1:100)
+DDCGdata <- haven::read_dta("data/DDCGdata.dta")
+DDCGdata <- haven::read_dta("vortrag/data/DDCGdata.dta")
+df <- DDCGdata %>%
+dplyr::select(1:100)
+rm(DDCGdata)
+pdf <- plm::pdata.frame(df, index=c("country_name", "year"))
+ivreg(
+y ~ dem + plm::lag(y, 1:4)+ factor(country_name) + factor(year) |
+plm::lag(demreg,1) + plm::lag(y, 1:4) + factor(country_name) + factor(year),
+data=pdf
+)
+library(AER)
+ivreg(
+y ~ dem + plm::lag(y, 1:4)+ factor(country_name) + factor(year) |
+plm::lag(demreg,1) + plm::lag(y, 1:4) + factor(country_name) + factor(year),
+data=pdf
+)
+AER::ivreg(
+y ~ dem + plm::lag(y, 1:4)+ factor(country_name) + factor(year) |
+plm::lag(demreg,1) + plm::lag(y, 1:4) + factor(country_name) + factor(year),
+data=pdf
+)
+iv_model <- ivreg(
+y ~ dem + lag(y, 1) + lag(y, 2) + lag(y, 3) + lag(y, 4)+ factor(country_name) + factor(year) |
+lag(demreg,1) + lag(y, 1) + lag(y, 2) + lag(y, 3) + lag(y, 4)+ factor(country_name) + factor(year),
+data=pdf
+)
+summary(iv_model)
+View(iv_model)
+library(tidyverse)
+library(plm)
+DDCGdata <- haven::read_dta("data/DDCGdata.dta")
+pdf <- pdata.frame(DDCGdata, index=c("country_name", "year"))
+rm(DDCGdata)
+head(pdf)
+model1 <- plm(
+loginvpc ~ dem + plm::lag(y,1:4)+ plm::lag(loginvpc, 1:4), #the equation with country fixed effects
+model="within", #The fixed effects within estimator
+data = pdf,
+effect = "twoways"
+)
+summary(model1)
+model2 <- plm(
+ltfp ~ dem + plm::lag(y,1:4)+ plm::lag(ltfp, 1:4), #the equation with country fixed effects
+model="within", #The fixed effects within estimator
+data = pdf,
+effect = "twoways"
+)
+summary(model2)
+model3 <- plm(
+marketref ~ dem + plm::lag(y,1:4)+ plm::lag(marketref, 1:4), #the equation with country fixed effects
+model="within", #The fixed effects within estimator
+data = pdf,
+effect = "twoways"
+)
+summary(model3)
+model4 <- plm(
+ltrade2 ~ dem + plm::lag(y,1:4)+ plm::lag(ltrade2, 1:4), #the equation with country fixed effects
+model="within", #The fixed effects within estimator
+data = pdf,
+effect = "twoways"
+)
+summary(model4)
+model5 <- plm(
+lprienr ~ dem + plm::lag(y,1:4)+ plm::lag(lprienr, 1:4), #the equation with country fixed effects
+model="within", #The fixed effects within estimator
+data = pdf,
+effect = "twoways"
+)
+summary(model5)
+model6 <- plm(
+lsecenr ~ dem + plm::lag(y,1:4)+ plm::lag(lsecenr, 1:4), #the equation with country fixed effects
+model="within", #The fixed effects within estimator
+data = pdf,
+effect = "twoways"
+)
+summary(model6)
+model7 <- plm(
+lmort ~ dem + plm::lag(y,1:4)+ plm::lag(lmort, 1:4), #the equation with country fixed effects
+model="within", #The fixed effects within estimator
+data = pdf,
+effect = "twoways"
+)
+summary(model7)
+model8 <- plm(
+unrestn ~ dem + plm::lag(y,1:4)+ plm::lag(unrestn, 1:4), #the equation with country fixed effects
+model="within", #The fixed effects within estimator
+data = pdf,
+effect = "twoways"
+)
+summary(model8)
+models <- list(model1, model2, model3, model4, model5, model6, model7, model8)
+lre <- list()
+for (i in 1:8) {
+beta_hat <- coef(models[[i]])["dem"]
+gamma_hat <- coef(models[[i]])[6:9]
+lre[[i]] <- beta_hat / (1 - sum(gamma_hat))
+}
+lre <- unlist(lre)
+lre <- round(lre, 2)
+persistence <- list()
+for (i in 1:8) {
+gamma_hat <- coef(models[[i]])[6:9]
+persistence[[i]] <- sum(gamma_hat)
+}
+pers <- unlist(persistence)
+pers <- round(pers, 2)
+models <- c(model1, model2, model3, model4, model5, model6, model7, model8)
+stargazer::stargazer(
+models,
+type = "text",
+title = "Channels",
+dep.var.labels = c(
+"Log Investment", "Log TFP", "Index Economic Reforms",
+"Log Trade Share", "Log Primary Enrollment", "Log Secondary Enrollment",
+"Log Child Mortality", "Dummy Unrest"
+),
+omit.stat = c("f", "ser", "rsq", "adj.rsq"),
+keep = "dem",
+keep.stat = "N",
+add.lines = list(
+c("Long Run Effect", lre),
+c("Persistence", pers)
+)
+)
+models <- c(model1, model2, model3, model4, model5, model6, model7, model8)
+stargazer::stargazer(
+models,
+type = "text",
+title = "Channels",
+dep.var.labels = c(
+"Log Investment", "Log TFP", "Index Economic Reforms",
+"Log Trade Share", "Log Primary Enrollment", "Log Secondary Enrollment",
+"Log Child Mortality", "Dummy Unrest"
+),
+omit.stat = c("f", "ser", "rsq", "adj.rsq"),
+keep = "dem",
+keep.stat = "N"
+)
+models <- c(model1, model2, model3, model4, model5, model6, model7, model8)
+stargazer::stargazer(
+model1, model2, model3, model4, model5, model6, model7, model8,
+type = "text",
+title = "Channels",
+dep.var.labels = c(
+"Log Investment", "Log TFP", "Index Economic Reforms",
+"Log Trade Share", "Log Primary Enrollment", "Log Secondary Enrollment",
+"Log Child Mortality", "Dummy Unrest"
+),
+omit.stat = c("f", "ser", "rsq", "adj.rsq"),
+keep = "dem",
+keep.stat = "N",
+add.lines = list(
+c("Long Run Effect", lre),
+c("Persistence", pers)
+)
+)
+models <- c(model1, model2, model3, model4, model5, model6, model7, model8)
+stargazer::stargazer(
+model1, model2, model3, model4, model5, model6, model7, model8,
+type = "html",
+out = "output/Table7.html",
+title = "Channels",
+dep.var.labels = c(
+"Log Investment", "Log TFP", "Index Economic Reforms",
+"Log Trade Share", "Log Primary Enrollment", "Log Secondary Enrollment",
+"Log Child Mortality", "Dummy Unrest"
+),
+omit.stat = c("f", "ser", "rsq", "adj.rsq"),
+keep = "dem",
+keep.stat = "N",
+add.lines = list(
+c("Long Run Effect", lre),
+c("Persistence", pers)
+)
+)
+AER::ivreg(
+y ~ dem + plm::lag(y, 1:4)+ factor(country_name) + factor(year) |
+plm::lag(demreg,1) + plm::lag(y, 1:4) + factor(country_name) + factor(year),
+data=pdf
+)
+plm::plm(
+y ~ dem + plm::lag(y, 1:4)+ factor(country_name) + factor(year) |
+plm::lag(demreg,1) + plm::lag(y, 1:4) + factor(country_name) + factor(year),
+data=pdf
+)
+iv_model <- plm::plm(
+y ~ dem + plm::lag(y, 1:4) |
+plm::lag(demreg,1) + plm::lag(y, 1:4),
+data=pdf,
+effect = "twoways",
+)
+summary(iv_model)
+iv_model_2 <- plm::plm(
+y ~ dem + plm::lag(y, 1:4) |
+plm::lag(demreg,1:4) + plm::lag(y, 1:4),
+data=pdf,
+effect = "twoways",
+)
+iv_model_2 <- plm::plm(
+y ~ dem + plm::lag(y, 1:4) |
+plm::lag(demreg,1:4) + plm::lag(y, 1:4),
+data=pdf,
+effect = "twoways",
+)
+summary(iv_model_2)
+library(tidyverse)
+library(plm)
+DDCGdata <- haven::read_dta("data/DDCGdata.dta")
+pdf <- pdata.frame(df, index=c("country_name", "year"))
+df <- DDCGdata %>%
+dplyr::select(1:100) %>%
+dplyr::mutate(loggdp = log(gdppercapitaconstant2000us))
+rm(DDCGdata)
