@@ -1,2 +1,0 @@
-"0","pdf <- pdata.frame(DDCGdata, index=c(""country_name"", ""year""))"
-"0","rm(DDCGdata)"

@@ -120,7 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../vortrag/1-Notes.html">Vortrag</a></li><li class="breadcrumb-item"><a href="../vortrag/7-Channels.Models.html">Channels</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../vortrag/1-Notes.html">Vortrag</a></li><li class="breadcrumb-item"><a href="../vortrag/7-Channels.Models.html">Channels of Democracy</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -208,25 +208,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../vortrag/2-Panel-Models.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Panel Models</span></a>
+ <span class="menu-text">Fixed Effects Models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../vortrag/3-Table2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Table 2</span></a>
+ <span class="menu-text">Fixed Effects Table</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../vortrag/4-Figure2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Figure 2</span></a>
+ <span class="menu-text">Figure Trend</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../vortrag/5-FigureDem.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Figure Democratization / Years</span></a>
+ <span class="menu-text">Figure Democratizations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -238,7 +238,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../vortrag/7-Channels.Models.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Channels</span></a>
+ <span class="menu-text">Channels of Democracy</span></a>
   </div>
 </li>
       </ul>
@@ -253,14 +253,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#channels" id="toc-channels" class="nav-link active" data-scroll-target="#channels">Channels</a>
+  <li><a href="#channels-of-democracy" id="toc-channels-of-democracy" class="nav-link active" data-scroll-target="#channels-of-democracy">Channels of Democracy</a>
   <ul class="collapse">
-  <li><a href="#estimating-the-models" id="toc-estimating-the-models" class="nav-link" data-scroll-target="#estimating-the-models">Estimating the Models</a>
+  <li><a href="#formula" id="toc-formula" class="nav-link" data-scroll-target="#formula">Formula</a></li>
+  <li><a href="#imports" id="toc-imports" class="nav-link" data-scroll-target="#imports">Imports</a></li>
+  <li><a href="#models" id="toc-models" class="nav-link" data-scroll-target="#models">Models</a>
   <ul class="collapse">
   <li><a href="#investment-share" id="toc-investment-share" class="nav-link" data-scroll-target="#investment-share">Investment Share</a></li>
   <li><a href="#tfp" id="toc-tfp" class="nav-link" data-scroll-target="#tfp">TFP</a></li>
   <li><a href="#reforms" id="toc-reforms" class="nav-link" data-scroll-target="#reforms">Reforms</a></li>
   <li><a href="#trade" id="toc-trade" class="nav-link" data-scroll-target="#trade">Trade</a></li>
+  <li><a href="#government-expenditure" id="toc-government-expenditure" class="nav-link" data-scroll-target="#government-expenditure">Government Expenditure</a></li>
   <li><a href="#primary-enrollment" id="toc-primary-enrollment" class="nav-link" data-scroll-target="#primary-enrollment">Primary Enrollment</a></li>
   <li><a href="#secondary-enrollment" id="toc-secondary-enrollment" class="nav-link" data-scroll-target="#secondary-enrollment">Secondary Enrollment</a></li>
   <li><a href="#child-mortality" id="toc-child-mortality" class="nav-link" data-scroll-target="#child-mortality">Child Mortality</a></li>
@@ -281,80 +284,50 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="channels" class="level1">
-<h1>Channels</h1>
+<section id="channels-of-democracy" class="level1">
+<h1>Channels of Democracy</h1>
+<p>Potential Channels mentioned and their respective variables:</p>
 <ul>
 <li>Log Investment = <code>loginvpc</code></li>
 <li>Log TFP = <code>ltfp</code></li>
-<li>INdex Economic Reforms: <code>marketref</code></li>
+<li>Index Economic Reforms: <code>marketref</code></li>
 <li>Trade Share = <code>ltrade</code></li>
+<li>Government Expenditure = <code>lgov</code></li>
 <li>Primary Enrollment = <code>lprienr</code></li>
 <li>Secondary enrollement = <code>lsecenr</code></li>
 <li>Child Mortality = <code>lmort</code></li>
 <li>Dummy Unrest = <code>unrestn</code></li>
 </ul>
-<p>Result should look like this:</p>
-<p><img src="../images/2023-11-23_15-43-01.jpg" class="img-fluid"></p>
-<section id="estimating-the-models" class="level2">
-<h2 class="anchored" data-anchor-id="estimating-the-models">Estimating the Models</h2>
+<section id="formula" class="level2">
+<h2 class="anchored" data-anchor-id="formula">Formula</h2>
 <p><span class="math display">\[
-var_{ct} = \beta D_t + \sum_{j=1}^4 \gamma_j y_{ct-j}+  \sum_{j=1}^4 \delta_j var_{ct-j} +\alpha_c + \delta_t + \epsilon_{ct}
-\]</span> 4 lags = preferred specification</p>
-<p>Formula:</p>
+var_{ct} = \beta D_{ct} + \sum_{j=1}^4 \gamma_j y_{ct-j}+  \sum_{j=1}^4 \delta_j var_{ct-j} +\alpha_c + \theta_t + \epsilon_{ct}
+\]</span> p = 4 lags = preferred specification</p>
+<p>Explanation:</p>
 <ul>
 <li><span class="math inline">\(var_{ct}\)</span> = explaining variable</li>
-<li><span class="math inline">\(y_ct\)</span> = log GDP per capita in country <em>c</em> at time <em>t</em>
-<ul>
-<li>column: <code>gdppercapitaconstant2000us</code></li>
-<li>already logged with <code>y</code></li>
-</ul></li>
-<li><span class="math inline">\(D_{ct}\)</span> = Dichotomous measure of democracy
-<ul>
-<li>column: <code>dem</code></li>
-</ul></li>
-<li><em>p</em> lags of log GDP for control</li>
+<li><span class="math inline">\(y_ct\)</span> = log GDP per capita in country <em>c</em> at time <em>t</em></li>
+<li><span class="math inline">\(D_{ct}\)</span> = Dichotomous measure of democracy</li>
+<li><em>4</em> lags of log GDP for control</li>
+<li><em>4</em> lags of the explaining variable for control</li>
 <li><span class="math inline">\(\alpha\)</span> = country fixed effects</li>
+<li><span class="math inline">\(\theta\)</span> = time fixed effects</li>
 <li><span class="math inline">\(e\)</span> = error</li>
 </ul>
+</section>
+<section id="imports" class="level2">
+<h2 class="anchored" data-anchor-id="imports">Imports</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>✓ ggplot2 3.3.5     ✓ purrr   0.3.4
-✓ tibble  3.1.5     ✓ dplyr   1.0.7
-✓ tidyr   1.1.4     ✓ stringr 1.4.0
-✓ readr   2.0.2     ✓ forcats 0.5.1</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-x dplyr::filter() masks stats::filter()
-x dplyr::lag()    masks stats::lag()</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'plm' was built under R version 4.1.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'plm'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:dplyr':
-
-    between, lag, lead</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>DDCGdata <span class="ot">&lt;-</span> haven<span class="sc">::</span><span class="fu">read_dta</span>(<span class="st">"data/DDCGdata.dta"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>pdf <span class="ot">&lt;-</span> <span class="fu">pdata.frame</span>(DDCGdata, <span class="at">index=</span><span class="fu">c</span>(<span class="st">"country_name"</span>, <span class="st">"year"</span>))</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(DDCGdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(pdf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>DDCGdata <span class="ot">&lt;-</span> haven<span class="sc">::</span><span class="fu">read_dta</span>(<span class="st">"data/DDCGdata.dta"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>pdf <span class="ot">&lt;-</span> <span class="fu">pdata.frame</span>(DDCGdata, <span class="at">index=</span><span class="fu">c</span>(<span class="st">"country_name"</span>, <span class="st">"year"</span>))</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(DDCGdata)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(pdf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div data-pagedtable="false">
@@ -364,371 +337,113 @@ Attaching package: 'plm'</code></pre>
 </div>
 </div>
 </div>
+</section>
+<section id="models" class="level2">
+<h2 class="anchored" data-anchor-id="models">Models</h2>
 <section id="investment-share" class="level3">
 <h3 class="anchored" data-anchor-id="investment-share">Investment Share</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  loginvpc <span class="sc">~</span> dem <span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(y,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)<span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(loginvpc, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="co">#the equation with country fixed effects</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">model=</span><span class="st">"within"</span>, <span class="co">#The fixed effects within estimator</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pdf, </span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">effect =</span> <span class="st">"twoways"</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Twoways effects Within Model
-
-Call:
-plm(formula = loginvpc ~ dem + plm::lag(y, 1:4) + plm::lag(loginvpc, 
-    1:4), data = pdf, effect = "twoways", model = "within")
-
-Unbalanced Panel: n = 169, T = 6-47, N = 5665
-
-Residuals:
-      Min.    1st Qu.     Median    3rd Qu.       Max. 
--201.39316   -7.43267    0.71893    8.54165  113.85860 
-
-Coefficients:
-                          Estimate Std. Error t-value  Pr(&gt;|t|)    
-dem                       2.390939   0.927783  2.5770 0.0099910 ** 
-plm::lag(y, 1:4)1         0.452132   0.056191  8.0464 1.038e-15 ***
-plm::lag(y, 1:4)2        -0.324202   0.086274 -3.7578 0.0001732 ***
-plm::lag(y, 1:4)3        -0.026916   0.083952 -0.3206 0.7485179    
-plm::lag(y, 1:4)4        -0.129825   0.052171 -2.4884 0.0128601 *  
-plm::lag(loginvpc, 1:4)1  0.690236   0.013570 50.8662 &lt; 2.2e-16 ***
-plm::lag(loginvpc, 1:4)2  0.011359   0.015997  0.7100 0.4777037    
-plm::lag(loginvpc, 1:4)3 -0.029878   0.015506 -1.9269 0.0540411 .  
-plm::lag(loginvpc, 1:4)4  0.065890   0.012391  5.3176 1.093e-07 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Total Sum of Squares:    4464300
-Residual Sum of Squares: 1930300
-R-Squared:      0.56763
-Adj. R-Squared: 0.5499
-F-statistic: 793.666 on 9 and 5441 DF, p-value: &lt; 2.22e-16</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  loginvpc <span class="sc">~</span> dem <span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(y,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)<span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(loginvpc, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="co">#the equation with country fixed effects</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">model=</span><span class="st">"within"</span>, <span class="co">#The fixed effects within estimator</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pdf, </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">effect =</span> <span class="st">"twoways"</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="tfp" class="level3">
 <h3 class="anchored" data-anchor-id="tfp">TFP</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  ltfp <span class="sc">~</span> dem <span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(y,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)<span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(ltfp, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="co">#the equation with country fixed effects</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">model=</span><span class="st">"within"</span>, <span class="co">#The fixed effects within estimator</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pdf, </span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">effect =</span> <span class="st">"twoways"</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Twoways effects Within Model
-
-Call:
-plm(formula = ltfp ~ dem + plm::lag(y, 1:4) + plm::lag(ltfp, 
-    1:4), data = pdf, effect = "twoways", model = "within")
-
-Unbalanced Panel: n = 107, T = 7-47, N = 3879
-
-Residuals:
-     Min.   1st Qu.    Median   3rd Qu.      Max. 
--60.50147  -1.49632   0.10997   1.75771  45.92785 
-
-Coefficients:
-                       Estimate Std. Error t-value Pr(&gt;|t|)    
-dem                  -0.2049144  0.2548445 -0.8041  0.42140    
-plm::lag(y, 1:4)1     0.0026085  0.0280415  0.0930  0.92589    
-plm::lag(y, 1:4)2    -0.0183795  0.0415899 -0.4419  0.65857    
-plm::lag(y, 1:4)3     0.0068156  0.0410520  0.1660  0.86815    
-plm::lag(y, 1:4)4     0.0095119  0.0268613  0.3541  0.72327    
-plm::lag(ltfp, 1:4)1  1.0879925  0.0280688 38.7616  &lt; 2e-16 ***
-plm::lag(ltfp, 1:4)2 -0.0592617  0.0403681 -1.4680  0.14218    
-plm::lag(ltfp, 1:4)3 -0.0360776  0.0397613 -0.9074  0.36428    
-plm::lag(ltfp, 1:4)4 -0.0637363  0.0265105 -2.4042  0.01626 *  
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Total Sum of Squares:    795540
-Residual Sum of Squares: 62638
-R-Squared:      0.92126
-Adj. R-Squared: 0.91785
-F-statistic: 4832.41 on 9 and 3717 DF, p-value: &lt; 2.22e-16</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  ltfp <span class="sc">~</span> dem <span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(y,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)<span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(ltfp, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="co">#the equation with country fixed effects</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">model=</span><span class="st">"within"</span>, <span class="co">#The fixed effects within estimator</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pdf, </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">effect =</span> <span class="st">"twoways"</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="reforms" class="level3">
 <h3 class="anchored" data-anchor-id="reforms">Reforms</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>model3 <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  marketref <span class="sc">~</span> dem <span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(y,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)<span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(marketref, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="co">#the equation with country fixed effects</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">model=</span><span class="st">"within"</span>, <span class="co">#The fixed effects within estimator</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pdf, </span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">effect =</span> <span class="st">"twoways"</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Twoways effects Within Model
-
-Call:
-plm(formula = marketref ~ dem + plm::lag(y, 1:4) + plm::lag(marketref, 
-    1:4), data = pdf, effect = "twoways", model = "within")
-
-Unbalanced Panel: n = 150, T = 3-42, N = 4692
-
-Residuals:
-     Min.   1st Qu.    Median   3rd Qu.      Max. 
--33.62820  -1.99900  -0.42973   1.35026  48.58196 
-
-Coefficients:
-                            Estimate Std. Error t-value Pr(&gt;|t|)    
-dem                        0.6871415  0.2819727  2.4369  0.01485 *  
-plm::lag(y, 1:4)1         -0.0288789  0.0160266 -1.8019  0.07162 .  
-plm::lag(y, 1:4)2          0.0420145  0.0251502  1.6705  0.09488 .  
-plm::lag(y, 1:4)3         -0.0400820  0.0244564 -1.6389  0.10130    
-plm::lag(y, 1:4)4          0.0148755  0.0152537  0.9752  0.32951    
-plm::lag(marketref, 1:4)1  0.8749372  0.0147243 59.4212  &lt; 2e-16 ***
-plm::lag(marketref, 1:4)2  0.0023759  0.0200483  0.1185  0.90567    
-plm::lag(marketref, 1:4)3 -0.0119273  0.0202220 -0.5898  0.55534    
-plm::lag(marketref, 1:4)4  0.0114678  0.0151498  0.7570  0.44911    
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Total Sum of Squares:    546950
-Residual Sum of Squares: 124180
-R-Squared:      0.77297
-Adj. R-Squared: 0.76291
-F-statistic: 1699.29 on 9 and 4492 DF, p-value: &lt; 2.22e-16</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>model3 <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  marketref <span class="sc">~</span> dem <span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(y,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)<span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(marketref, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="co">#the equation with country fixed effects</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">model=</span><span class="st">"within"</span>, <span class="co">#The fixed effects within estimator</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pdf, </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">effect =</span> <span class="st">"twoways"</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="trade" class="level3">
 <h3 class="anchored" data-anchor-id="trade">Trade</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>model4 <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  ltrade2 <span class="sc">~</span> dem <span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(y,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)<span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(ltrade2, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="co">#the equation with country fixed effects</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">model=</span><span class="st">"within"</span>, <span class="co">#The fixed effects within estimator</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pdf, </span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">effect =</span> <span class="st">"twoways"</span></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Twoways effects Within Model
-
-Call:
-plm(formula = ltrade2 ~ dem + plm::lag(y, 1:4) + plm::lag(ltrade2, 
-    1:4), data = pdf, effect = "twoways", model = "within")
-
-Unbalanced Panel: n = 172, T = 6-46, N = 5738
-
-Residuals:
-      Min.    1st Qu.     Median    3rd Qu.       Max. 
--80.085518  -4.728443  -0.039658   4.614818  94.569831 
-
-Coefficients:
-                         Estimate Std. Error  t-value  Pr(&gt;|t|)    
-dem                      0.689431   0.502916   1.3709   0.17047    
-plm::lag(y, 1:4)1       -0.055923   0.029546  -1.8927   0.05845 .  
-plm::lag(y, 1:4)2        0.104549   0.046239   2.2611   0.02379 *  
-plm::lag(y, 1:4)3       -0.024603   0.044918  -0.5477   0.58389    
-plm::lag(y, 1:4)4       -0.025274   0.027297  -0.9259   0.35455    
-plm::lag(ltrade2, 1:4)1  0.993988   0.013349  74.4628 &lt; 2.2e-16 ***
-plm::lag(ltrade2, 1:4)2 -0.194571   0.018565 -10.4804 &lt; 2.2e-16 ***
-plm::lag(ltrade2, 1:4)3  0.091406   0.018120   5.0444 4.696e-07 ***
-plm::lag(ltrade2, 1:4)4 -0.017430   0.012776  -1.3643   0.17254    
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Total Sum of Squares:    2788500
-Residual Sum of Squares: 569420
-R-Squared:      0.7958
-Adj. R-Squared: 0.78746
-F-statistic: 2386.76 on 9 and 5512 DF, p-value: &lt; 2.22e-16</code></pre>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>model4 <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  ltrade2 <span class="sc">~</span> dem <span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(y,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)<span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(ltrade2, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="co">#the equation with country fixed effects</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">model=</span><span class="st">"within"</span>, <span class="co">#The fixed effects within estimator</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pdf, </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">effect =</span> <span class="st">"twoways"</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="government-expenditure" class="level3">
+<h3 class="anchored" data-anchor-id="government-expenditure">Government Expenditure</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>model5 <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  lgov <span class="sc">~</span> dem <span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(y,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)<span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(lgov, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="co">#the equation with country fixed effects</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">model=</span><span class="st">"within"</span>, <span class="co">#The fixed effects within estimator</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pdf, </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">effect =</span> <span class="st">"twoways"</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="primary-enrollment" class="level3">
 <h3 class="anchored" data-anchor-id="primary-enrollment">Primary Enrollment</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>model5 <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  lprienr <span class="sc">~</span> dem <span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(y,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)<span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(lprienr, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="co">#the equation with country fixed effects</span></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">model=</span><span class="st">"within"</span>, <span class="co">#The fixed effects within estimator</span></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pdf, </span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">effect =</span> <span class="st">"twoways"</span></span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Twoways effects Within Model
-
-Call:
-plm(formula = lprienr ~ dem + plm::lag(y, 1:4) + plm::lag(lprienr, 
-    1:4), data = pdf, effect = "twoways", model = "within")
-
-Unbalanced Panel: n = 166, T = 1-37, N = 3714
-
-Residuals:
-      Min.    1st Qu.     Median    3rd Qu.       Max. 
--28.081313  -1.162445  -0.029028   1.083581  47.243020 
-
-Coefficients:
-                          Estimate Std. Error t-value  Pr(&gt;|t|)    
-dem                      1.0422339  0.2298987  4.5334 5.997e-06 ***
-plm::lag(y, 1:4)1        0.0261731  0.0133850  1.9554  0.050614 .  
-plm::lag(y, 1:4)2       -0.0123707  0.0211728 -0.5843  0.559074    
-plm::lag(y, 1:4)3       -0.0192675  0.0208538 -0.9239  0.355586    
-plm::lag(y, 1:4)4       -0.0016284  0.0126222 -0.1290  0.897355    
-plm::lag(lprienr, 1:4)1  1.1704886  0.0164883 70.9890 &lt; 2.2e-16 ***
-plm::lag(lprienr, 1:4)2 -0.1058403  0.0255834 -4.1371 3.600e-05 ***
-plm::lag(lprienr, 1:4)3 -0.0864962  0.0234215 -3.6930  0.000225 ***
-plm::lag(lprienr, 1:4)4 -0.0257250  0.0135357 -1.9005  0.057445 .  
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Total Sum of Squares:    764500
-Residual Sum of Squares: 43980
-R-Squared:      0.94247
-Adj. R-Squared: 0.93902
-F-statistic: 6376.63 on 9 and 3503 DF, p-value: &lt; 2.22e-16</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>model6 <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  lprienr <span class="sc">~</span> dem <span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(y,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)<span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(lprienr, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="co">#the equation with country fixed effects</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">model=</span><span class="st">"within"</span>, <span class="co">#The fixed effects within estimator</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pdf, </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">effect =</span> <span class="st">"twoways"</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="secondary-enrollment" class="level3">
 <h3 class="anchored" data-anchor-id="secondary-enrollment">Secondary Enrollment</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>model6 <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  lsecenr <span class="sc">~</span> dem <span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(y,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)<span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(lsecenr, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="co">#the equation with country fixed effects</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">model=</span><span class="st">"within"</span>, <span class="co">#The fixed effects within estimator</span></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pdf, </span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">effect =</span> <span class="st">"twoways"</span></span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model6)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Twoways effects Within Model
-
-Call:
-plm(formula = lsecenr ~ dem + plm::lag(y, 1:4) + plm::lag(lsecenr, 
-    1:4), data = pdf, effect = "twoways", model = "within")
-
-Unbalanced Panel: n = 158, T = 1-37, N = 2883
-
-Residuals:
-     Min.   1st Qu.    Median   3rd Qu.      Max. 
--37.09825  -1.81714  -0.11074   1.72827  68.00555 
-
-Coefficients:
-                         Estimate Std. Error t-value  Pr(&gt;|t|)    
-dem                      1.344711   0.392829  3.4231 0.0006283 ***
-plm::lag(y, 1:4)1        0.054891   0.022177  2.4751 0.0133807 *  
-plm::lag(y, 1:4)2        0.017451   0.035353  0.4936 0.6216096    
-plm::lag(y, 1:4)3       -0.097302   0.034550 -2.8163 0.0048942 ** 
-plm::lag(y, 1:4)4        0.028709   0.020869  1.3757 0.1690342    
-plm::lag(lsecenr, 1:4)1  1.147727   0.018536 61.9191 &lt; 2.2e-16 ***
-plm::lag(lsecenr, 1:4)2 -0.137150   0.028028 -4.8933  1.05e-06 ***
-plm::lag(lsecenr, 1:4)3 -0.043285   0.027218 -1.5903 0.1118850    
-plm::lag(lsecenr, 1:4)4 -0.038215   0.016570 -2.3063 0.0211705 *  
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Total Sum of Squares:    1122700
-Residual Sum of Squares: 68219
-R-Squared:      0.93924
-Adj. R-Squared: 0.93466
-F-statistic: 4602.81 on 9 and 2680 DF, p-value: &lt; 2.22e-16</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>model7 <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  lsecenr <span class="sc">~</span> dem <span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(y,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)<span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(lsecenr, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="co">#the equation with country fixed effects</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">model=</span><span class="st">"within"</span>, <span class="co">#The fixed effects within estimator</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pdf, </span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">effect =</span> <span class="st">"twoways"</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="child-mortality" class="level3">
 <h3 class="anchored" data-anchor-id="child-mortality">Child Mortality</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>model7 <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  lmort <span class="sc">~</span> dem <span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(y,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)<span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(lmort, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="co">#the equation with country fixed effects</span></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">model=</span><span class="st">"within"</span>, <span class="co">#The fixed effects within estimator</span></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pdf, </span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">effect =</span> <span class="st">"twoways"</span></span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model7)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Twoways effects Within Model
-
-Call:
-plm(formula = lmort ~ dem + plm::lag(y, 1:4) + plm::lag(lmort, 
-    1:4), data = pdf, effect = "twoways", model = "within")
-
-Unbalanced Panel: n = 173, T = 7-47, N = 6084
-
-Residuals:
-       Min.     1st Qu.      Median     3rd Qu.        Max. 
--16.9332023  -0.3358703   0.0037776   0.3297162  19.6426752 
-
-Coefficients:
-                        Estimate Std. Error  t-value  Pr(&gt;|t|)    
-dem                   -0.2531128  0.0505978  -5.0024 5.826e-07 ***
-plm::lag(y, 1:4)1      0.0006965  0.0027986   0.2489  0.803468    
-plm::lag(y, 1:4)2      0.0051157  0.0043672   1.1714  0.241483    
-plm::lag(y, 1:4)3     -0.0134093  0.0042417  -3.1613  0.001578 ** 
-plm::lag(y, 1:4)4      0.0085467  0.0026472   3.2286  0.001251 ** 
-plm::lag(lmort, 1:4)1  1.8239450  0.0134573 135.5360 &lt; 2.2e-16 ***
-plm::lag(lmort, 1:4)2 -0.6450876  0.0283214 -22.7774 &lt; 2.2e-16 ***
-plm::lag(lmort, 1:4)3 -0.3934652  0.0287469 -13.6872 &lt; 2.2e-16 ***
-plm::lag(lmort, 1:4)4  0.2072207  0.0138102  15.0049 &lt; 2.2e-16 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Total Sum of Squares:    2611000
-Residual Sum of Squares: 6857.4
-R-Squared:      0.99737
-Adj. R-Squared: 0.99727
-F-statistic: 247093 on 9 and 5856 DF, p-value: &lt; 2.22e-16</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>model8 <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  lmort <span class="sc">~</span> dem <span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(y,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)<span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(lmort, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="co">#the equation with country fixed effects</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">model=</span><span class="st">"within"</span>, <span class="co">#The fixed effects within estimator</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pdf, </span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">effect =</span> <span class="st">"twoways"</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="unrest" class="level3">
 <h3 class="anchored" data-anchor-id="unrest">Unrest</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>model8 <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  unrestn <span class="sc">~</span> dem <span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(y,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)<span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(unrestn, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="co">#the equation with country fixed effects</span></span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">model=</span><span class="st">"within"</span>, <span class="co">#The fixed effects within estimator</span></span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pdf, </span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">effect =</span> <span class="st">"twoways"</span></span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model8)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Twoways effects Within Model
-
-Call:
-plm(formula = unrestn ~ dem + plm::lag(y, 1:4) + plm::lag(unrestn, 
-    1:4), data = pdf, effect = "twoways", model = "within")
-
-Unbalanced Panel: n = 171, T = 2-47, N = 5646
-
-Residuals:
-    Min.  1st Qu.   Median  3rd Qu.     Max. 
--92.2678 -19.5626  -4.3970   8.4947 108.9411 
-
-Coefficients:
-                         Estimate Std. Error t-value  Pr(&gt;|t|)    
-dem                     -7.831818   1.764041 -4.4397 9.187e-06 ***
-plm::lag(y, 1:4)1       -0.440248   0.102000 -4.3161 1.616e-05 ***
-plm::lag(y, 1:4)2        0.565748   0.156628  3.6120 0.0003066 ***
-plm::lag(y, 1:4)3       -0.321628   0.150935 -2.1309 0.0331423 *  
-plm::lag(y, 1:4)4        0.132286   0.093351  1.4171 0.1565198    
-plm::lag(unrestn, 1:4)1  0.208912   0.013521 15.4511 &lt; 2.2e-16 ***
-plm::lag(unrestn, 1:4)2  0.061469   0.013714  4.4822 7.540e-06 ***
-plm::lag(unrestn, 1:4)3  0.051200   0.013611  3.7616 0.0001706 ***
-plm::lag(unrestn, 1:4)4  0.022693   0.013235  1.7146 0.0864773 .  
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Total Sum of Squares:    7495400
-Residual Sum of Squares: 6909800
-R-Squared:      0.078133
-Adj. R-Squared: 0.039864
-F-statistic: 51.0415 on 9 and 5420 DF, p-value: &lt; 2.22e-16</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>model9 <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  unrestn <span class="sc">~</span> dem <span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(y,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)<span class="sc">+</span> plm<span class="sc">::</span><span class="fu">lag</span>(unrestn, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="co">#the equation with country fixed effects</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">model=</span><span class="st">"within"</span>, <span class="co">#The fixed effects within estimator</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> pdf, </span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">effect =</span> <span class="st">"twoways"</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
 <section id="additional-infos-about-the-models" class="level2">
 <h2 class="anchored" data-anchor-id="additional-infos-about-the-models">Additional Infos about the Models</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>models <span class="ot">&lt;-</span> <span class="fu">list</span>(model1, model2, model3, model4, model5, model6, model7, model8)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>models <span class="ot">&lt;-</span> <span class="fu">list</span>(model1, model2, model3, model4, model5, model6, model7, model8, model9)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="long-run" class="level3">
 <h3 class="anchored" data-anchor-id="long-run">Long Run</h3>
@@ -737,81 +452,81 @@ F-statistic: 51.0415 on 9 and 5420 DF, p-value: &lt; 2.22e-16</code></pre>
 \frac{ \hat\beta }{1- \sum_{j=1}^p \hat\gamma_j}
 \]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>lre <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>) {</span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  beta_hat <span class="ot">&lt;-</span> <span class="fu">coef</span>(models[[i]])[<span class="st">"dem"</span>]</span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>  gamma_hat <span class="ot">&lt;-</span> <span class="fu">coef</span>(models[[i]])[<span class="dv">6</span><span class="sc">:</span><span class="dv">9</span>]</span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>  lre[[i]] <span class="ot">&lt;-</span> beta_hat <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">sum</span>(gamma_hat))</span>
-<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>lre <span class="ot">&lt;-</span> <span class="fu">unlist</span>(lre)</span>
-<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>lre <span class="ot">&lt;-</span> <span class="fu">round</span>(lre, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>lre <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>) {</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  beta_hat <span class="ot">&lt;-</span> <span class="fu">coef</span>(models[[i]])[<span class="st">"dem"</span>]</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  gamma_hat <span class="ot">&lt;-</span> <span class="fu">coef</span>(models[[i]])[<span class="dv">6</span><span class="sc">:</span><span class="dv">9</span>]</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  lre[[i]] <span class="ot">&lt;-</span> beta_hat <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">sum</span>(gamma_hat))</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>lre <span class="ot">&lt;-</span> <span class="fu">unlist</span>(lre)</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>lre <span class="ot">&lt;-</span> <span class="fu">round</span>(lre, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="persistence" class="level3">
 <h3 class="anchored" data-anchor-id="persistence">Persistence</h3>
 <p>Calculate the persistence for the different models with this Formula:</p>
 <p><span class="math display">\[
-\sum_{j=1}^p \hat\gamma_j
+D_{pers} = \sum_{j=1}^p \hat\gamma_j
 \]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>persistence <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>) {</span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>  gamma_hat <span class="ot">&lt;-</span> <span class="fu">coef</span>(models[[i]])[<span class="dv">6</span><span class="sc">:</span><span class="dv">9</span>]</span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>  persistence[[i]] <span class="ot">&lt;-</span> <span class="fu">sum</span>(gamma_hat)</span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>pers <span class="ot">&lt;-</span> <span class="fu">unlist</span>(persistence)</span>
-<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>pers <span class="ot">&lt;-</span> <span class="fu">round</span>(pers, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>persistence <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>) {</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  gamma_hat <span class="ot">&lt;-</span> <span class="fu">coef</span>(models[[i]])[<span class="dv">6</span><span class="sc">:</span><span class="dv">9</span>]</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  persistence[[i]] <span class="ot">&lt;-</span> <span class="fu">sum</span>(gamma_hat)</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>pers <span class="ot">&lt;-</span> <span class="fu">unlist</span>(persistence)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>pers <span class="ot">&lt;-</span> <span class="fu">round</span>(pers, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
 <section id="creating-the-table" class="level2">
 <h2 class="anchored" data-anchor-id="creating-the-table">Creating the Table</h2>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>models <span class="ot">&lt;-</span> <span class="fu">c</span>(model1, model2, model3, model4, model5, model6, model7, model8)</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>stargazer<span class="sc">::</span><span class="fu">stargazer</span>(</span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>          model1, model2, model3, model4, model5, model6, model7, model8,</span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">type =</span> <span class="st">"html"</span>, </span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">out =</span> <span class="st">"output/Table7.html"</span>,</span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>          <span class="at">title =</span> <span class="st">"Channels"</span>, </span>
-<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>          <span class="at">dep.var.labels =</span> <span class="fu">c</span>(</span>
-<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>              <span class="st">"Log Investment"</span>, <span class="st">"Log TFP"</span>, <span class="st">"Index Economic Reforms"</span>, </span>
-<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>              <span class="st">"Log Trade Share"</span>, <span class="st">"Log Primary Enrollment"</span>, <span class="st">"Log Secondary Enrollment"</span>, </span>
-<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>              <span class="st">"Log Child Mortality"</span>, <span class="st">"Dummy Unrest"</span></span>
-<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>              ), </span>
-<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>          <span class="at">omit.stat =</span> <span class="fu">c</span>(<span class="st">"f"</span>, <span class="st">"ser"</span>, <span class="st">"rsq"</span>, <span class="st">"adj.rsq"</span>),</span>
-<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>          <span class="at">keep =</span> <span class="st">"dem"</span>,</span>
-<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>          <span class="at">keep.stat =</span> <span class="st">"N"</span>,</span>
-<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>          <span class="at">add.lines =</span> <span class="fu">list</span>(</span>
-<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>            <span class="fu">c</span>(<span class="st">"Long Run Effect"</span>, lre),</span>
-<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>            <span class="fu">c</span>(<span class="st">"Persistence"</span>, pers)</span>
-<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>          )</span>
-<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>models <span class="ot">&lt;-</span> <span class="fu">list</span>(model1, model2, model3, model4, model5, model6, model7, model8, model9)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>stargazer<span class="sc">::</span><span class="fu">stargazer</span>(</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>          models,</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">type =</span> <span class="st">"html"</span>, </span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">covariate.labels =</span> <span class="fu">c</span>(<span class="st">"Democracy"</span>),</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>          <span class="at">title =</span> <span class="st">"Effects of Democracy on Potential Channels"</span>, </span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>          <span class="at">dep.var.labels =</span> <span class="fu">c</span>(</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>              <span class="st">"Log Investment"</span>, <span class="st">"Log TFP"</span>, <span class="st">"Index Economic Reforms"</span>, </span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>              <span class="st">"Log Trade Share"</span>, <span class="st">"Log of Gov. Exp."</span>,<span class="st">"Log Primary Enrollment"</span>, </span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>              <span class="st">"Log Secondary Enrollment"</span>, <span class="st">"Log Child Mortality"</span>, <span class="st">"Dummy Unrest"</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>              ), </span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>          <span class="at">omit.stat =</span> <span class="fu">c</span>(<span class="st">"f"</span>, <span class="st">"ser"</span>, <span class="st">"rsq"</span>, <span class="st">"adj.rsq"</span>),</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>          <span class="at">keep =</span> <span class="st">"dem"</span>,</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>          <span class="at">keep.stat =</span> <span class="st">"N"</span>,</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>          <span class="at">add.lines =</span> <span class="fu">list</span>(</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>            <span class="fu">c</span>(<span class="st">"Long Run Effect"</span>, lre),</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>            <span class="fu">c</span>(<span class="st">"Persistence"</span>, pers)</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>          )</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <table style="text-align:center">
 <caption>
-<strong>Channels</strong>
+<strong>Effects of Democracy on Potential Channels</strong>
 </caption>
 <tbody><tr>
-<td colspan="9" style="border-bottom: 1px solid black">
+<td colspan="10" style="border-bottom: 1px solid black">
 </td>
 </tr>
 <tr>
 <td style="text-align:left">
 </td>
-<td colspan="8">
+<td colspan="9">
 <em>Dependent variable:</em>
 </td>
 </tr>
 <tr>
 <td>
 </td>
-<td colspan="8" style="border-bottom: 1px solid black">
+<td colspan="9" style="border-bottom: 1px solid black">
 </td>
 </tr>
 <tr>
@@ -828,6 +543,9 @@ Index Economic Reforms
 </td>
 <td>
 Log Trade Share
+</td>
+<td>
+Log of Gov.&nbsp;Exp.
 </td>
 <td>
 Log Primary Enrollment
@@ -869,14 +587,17 @@ Dummy Unrest
 <td>
 (8)
 </td>
+<td>
+(9)
+</td>
 </tr>
 <tr>
-<td colspan="9" style="border-bottom: 1px solid black">
+<td colspan="10" style="border-bottom: 1px solid black">
 </td>
 </tr>
 <tr>
 <td style="text-align:left">
-dem
+Democracy
 </td>
 <td>
 2.391<sup>***</sup>
@@ -889,6 +610,9 @@ dem
 </td>
 <td>
 0.689
+</td>
+<td>
+3.311<sup>***</sup>
 </td>
 <td>
 1.042<sup>***</sup>
@@ -917,6 +641,9 @@ dem
 </td>
 <td>
 (0.503)
+</td>
+<td>
+(1.078)
 </td>
 <td>
 (0.230)
@@ -950,9 +677,11 @@ dem
 </td>
 <td>
 </td>
+<td>
+</td>
 </tr>
 <tr>
-<td colspan="9" style="border-bottom: 1px solid black">
+<td colspan="10" style="border-bottom: 1px solid black">
 </td>
 </tr>
 <tr>
@@ -970,6 +699,9 @@ Long Run Effect
 </td>
 <td>
 5.45
+</td>
+<td>
+16.06
 </td>
 <td>
 21.91
@@ -1001,6 +733,9 @@ Persistence
 0.87
 </td>
 <td>
+0.79
+</td>
+<td>
 0.95
 </td>
 <td>
@@ -1030,6 +765,9 @@ Observations
 5,738
 </td>
 <td>
+4,511
+</td>
+<td>
 3,714
 </td>
 <td>
@@ -1043,19 +781,40 @@ Observations
 </td>
 </tr>
 <tr>
-<td colspan="9" style="border-bottom: 1px solid black">
+<td colspan="10" style="border-bottom: 1px solid black">
 </td>
 </tr>
 <tr>
 <td style="text-align:left">
 <em>Note:</em>
 </td>
-<td colspan="8" style="text-align:right">
+<td colspan="9" style="text-align:right">
 <sup><em></em></sup><em>p&lt;0.1; <sup><strong></strong></sup><strong>p&lt;0.05; <sup></sup></strong></em>p&lt;0.01
 </td>
 </tr>
 
 </tbody></table>
+<p>Saving the Table as Tex</p>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>stargazer<span class="sc">::</span><span class="fu">stargazer</span>(</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>          models,</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">type =</span> <span class="st">"latex"</span>,</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">out =</span> <span class="st">"output/table_channels.tex"</span>,</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">covariate.labels =</span> <span class="fu">c</span>(<span class="st">"Democracy"</span>),</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">title =</span> <span class="st">"Effects of Democracy on Potential Channels"</span>, </span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>          <span class="at">dep.var.labels =</span> <span class="fu">c</span>(</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>              <span class="st">"Log Investment"</span>, <span class="st">"Log TFP"</span>, <span class="st">"Index Economic Reforms"</span>, </span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>              <span class="st">"Log Trade Share"</span>, <span class="st">"Log of Gov. Exp."</span>,<span class="st">"Log Primary Enrollment"</span>, </span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>              <span class="st">"Log Secondary Enrollment"</span>, <span class="st">"Log Child Mortality"</span>, <span class="st">"Dummy Unrest"</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>              ), </span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>          <span class="at">omit.stat =</span> <span class="fu">c</span>(<span class="st">"f"</span>, <span class="st">"ser"</span>, <span class="st">"rsq"</span>, <span class="st">"adj.rsq"</span>),</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>          <span class="at">keep =</span> <span class="st">"dem"</span>,</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>          <span class="at">keep.stat =</span> <span class="st">"N"</span>,</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>          <span class="at">add.lines =</span> <span class="fu">list</span>(</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>            <span class="fu">c</span>(<span class="st">"Long Run Effect"</span>, lre),</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>            <span class="fu">c</span>(<span class="st">"Persistence"</span>, pers)</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>          )</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com % Date and time: Mon, Dec 04, 2023 - 12:49:05
 
 
 </section>

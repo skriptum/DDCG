@@ -1,13 +1,14 @@
----
-eval: false
----
 # IV Regressions
+
+## Model
+
+First Stage:
 
 $$
 y_{ct} = \beta D_{ct} + \sum_{j=1}^p \gamma_j y_{ct-j} + \alpha_c + \delta_t + \epsilon_{ct}
 $$
 
-with D as IV:
+Second Stage: with D as IV
 
 $$
 D_{ct} = \sum_{j=1}^p \pi_j Z_{ct-j}+ \sum_{j=1}^p \phi y_{ct-j} + \Phi_c+ \mu_t+ v_{ct}
@@ -18,8 +19,6 @@ $$
 -   y = log gdp per capita = `y` variable
 
 Estimated with 2SLS Regression
-
-**Replication**
 
 ## Imports
 
@@ -286,20 +285,46 @@ pers4 <- sum(coef(iv_model_4)[2:5])
 pers <- c(pers1, pers2, pers3, pers4)
 pers <- round(pers, 3)
 pers
-````
+```
 
 ## Table
 
 ```{r}
 #| output: asis
-stargazer(iv_model_1, iv_model_2, iv_model_3, iv_model_4, 
+models <- list(iv_model_1, iv_model_2, iv_model_3, iv_model_4)
+
+stargazer(models, 
           type = "html",
+          title = "Effect of Democracy on (Log) GDP per Capita",
           keep = c("dem"),
           column.labels = c("1 Lag", "4 Lags", "Soviet Dummies", "Regional Trends"),
-          dep.var.labels = "GDP Growth",  
+          dep.var.labels = "Dependent Variable",
           covariate.labels = c("Democracy"),
           omit.stat = c("ser", "rsq", "adj.rsq", "f"),
-          add.lines = list( # add lines for persistence and long run effect
+          add.lines = list( # add lines for persistence, long run effect and effect after 25 years
+            c("Persistence: ", pers),
+            c("Long run effect: ", lre),
+            c("Effect after 25 years: ", sre)
+            )
+          )
+```
+Save to Tex:
+
+```{r}
+#| output: false
+#| message: false
+#| warning: false
+
+stargazer(models, 
+          type = "latex",
+          out = "output/table_iv.tex",
+          title = "Effect of Democracy on (Log) GDP per Capita",
+          keep = c("dem"),
+          column.labels = c("1 Lag", "4 Lags", "Soviet Dummies", "Regional Trends"),
+          dep.var.labels = "Dependent Variable",
+          covariate.labels = c("Democracy"),
+          omit.stat = c("ser", "rsq", "adj.rsq", "f"),
+          add.lines = list( # add lines for persistence, long run effect and effect after 25 years
             c("Persistence: ", pers),
             c("Long run effect: ", lre),
             c("Effect after 25 years: ", sre)

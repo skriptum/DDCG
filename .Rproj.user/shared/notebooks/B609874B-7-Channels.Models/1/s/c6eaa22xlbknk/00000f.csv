@@ -78,6 +78,21 @@
  "
 "2"," the condition has length > 1 and only the first element will be used
 "
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
 "0","lre <- list()"
 "2","Warning in if (n >= 10000L) return(TRUE) :"
 "2","
@@ -159,7 +174,37 @@
  "
 "2"," the condition has length > 1 and only the first element will be used
 "
-"0","for (i in 1:8) {"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"0","for (i in 1:9) {"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
 "2","Warning in if (n >= 10000L) return(TRUE) :"
 "2","
  "
@@ -321,7 +366,37 @@
  "
 "2"," the condition has length > 1 and only the first element will be used
 "
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
 "0","  gamma_hat <- coef(models[[i]])[6:9]"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
 "2","Warning in if (n >= 10000L) return(TRUE) :"
 "2","
  "
@@ -483,7 +558,37 @@
  "
 "2"," the condition has length > 1 and only the first element will be used
 "
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
 "0","  lre[[i]] <- beta_hat / (1 - sum(gamma_hat))"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
 "2","Warning in if (n >= 10000L) return(TRUE) :"
 "2","
  "
@@ -645,7 +750,37 @@
  "
 "2"," the condition has length > 1 and only the first element will be used
 "
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
 "0","lre <- unlist(lre)"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
+"2","Warning in if (n >= 10000L) return(TRUE) :"
+"2","
+ "
+"2"," the condition has length > 1 and only the first element will be used
+"
 "2","Warning in if (n >= 10000L) return(TRUE) :"
 "2","
  "
