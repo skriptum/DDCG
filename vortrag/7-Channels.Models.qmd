@@ -236,6 +236,7 @@ stargazer::stargazer(
           type = "latex",
           out = "output/table_channels.tex",
           covariate.labels = c("Democracy"),
+          column.sep.width = "0.01pt",
           title = "Effects of Democracy on Potential Channels", 
           dep.var.labels = c(
               "Log Investment", "Log TFP", "Index Economic Reforms", 

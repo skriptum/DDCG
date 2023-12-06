@@ -37,6 +37,6 @@ fig <- ggplot(d_df, aes(x = year, y = count)) +
 Save the Figure and preview the Figure (interactive with `ggplotly()`)
 
 ```{r}
-ggsave("output/figureDem.png", fig, width = 8, height = 4, dpi = 300)
+ggsave("output/figureDem.png", fig, width = 10, height = 4, dpi = 300)
 ggplotly(fig)
 ```
