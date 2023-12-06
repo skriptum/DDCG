@@ -267,7 +267,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#table-fe" id="toc-table-fe" class="nav-link" data-scroll-target="#table-fe">Table FE</a></li>
   </ul></li>
-  <li><a href="#effect-of-democracy-on-log-gdp-per-capita" id="toc-effect-of-democracy-on-log-gdp-per-capita" class="nav-link" data-scroll-target="#effect-of-democracy-on-log-gdp-per-capita">Effect of Democracy on (Log) GDP per Capita</a></li>
   </ul>
 </nav>
     </div>
@@ -508,7 +507,7 @@ effect_{t} = \hat\beta + \sum_{j=1}^p \hat\gamma_j * effect_{t-j}
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>models <span class="ot">&lt;-</span> <span class="fu">list</span>(model1, model2, model3, model4)</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">stargazer</span>(models, </span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">type =</span> <span class="st">"text"</span>, <span class="co">#change to "text" for easy viewing in console</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">type =</span> <span class="st">"html"</span>, <span class="co">#change to "text" for easy viewing in console</span></span>
 <span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">title =</span> <span class="st">"Effect of Democracy on (Log) GDP per Capita"</span>, <span class="co"># title</span></span>
 <span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">dep.var.labels =</span> <span class="st">"Log GDP per Capita"</span>,  </span>
 <span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>          <span class="at">covariate.labels =</span> <span class="fu">c</span>(<span class="st">"Democracy"</span>),</span>
@@ -525,67 +524,419 @@ effect_{t} = \hat\beta + \sum_{j=1}^p \hat\gamma_j * effect_{t-j}
 <span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a>          <span class="at">notes =</span> <span class="st">"The reported coefficient on democracy is multiplied by 100. Replication of Table 2 in ANRR (2019)"</span>,</span>
 <span id="cb33-19"><a href="#cb33-19" aria-hidden="true" tabindex="-1"></a>          <span class="at">notes.append =</span> <span class="cn">FALSE</span> <span class="co"># add notes to the end of the table</span></span>
 <span id="cb33-20"><a href="#cb33-20" aria-hidden="true" tabindex="-1"></a>          )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-</section>
-<section id="effect-of-democracy-on-log-gdp-per-capita" class="level1">
-<h1>Effect of Democracy on (Log) GDP per Capita</h1>
-<pre><code>                                                           Dependent variable:                                         
-                   ----------------------------------------------------------------------------------------------------
-                                                            Log GDP per Capita                                         
-                              (1)                      (2)                      (3)                      (4)           </code></pre>
-<table class="table">
-<colgroup>
-<col style="width: 100%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Democracy 0.973*** 0.651*** 0.787*** 0.887*** (0.240) (0.229) (0.228) (0.239)</td>
+
+<table style="text-align:center">
+<caption>
+<strong>Effect of Democracy on (Log) GDP per Capita</strong>
+</caption>
+<tbody><tr>
+<td colspan="5" style="border-bottom: 1px solid black">
+</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">lag1 0.973*** 1.266*** 1.238*** 1.233*** (0.003) (0.012) (0.013) (0.013)</td>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="4">
+<em>Dependent variable:</em>
+</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">lag2 -0.300*** -0.207*** -0.214*** (0.012) (0.020) (0.021)</td>
+<tr>
+<td>
+</td>
+<td colspan="4" style="border-bottom: 1px solid black">
+</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">lag3 -0.026 -0.021 (0.019) (0.021)</td>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="4">
+Log GDP per Capita
+</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">lag4 -0.043*** -0.039* (0.012) (0.020)</td>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1)
+</td>
+<td>
+(2)
+</td>
+<td>
+(3)
+</td>
+<td>
+(4)
+</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">lag5 -0.019 (0.020)</td>
+<tr>
+<td colspan="5" style="border-bottom: 1px solid black">
+</td>
 </tr>
-</tbody>
-</table>
-<p>Persistence: 0.973 0.967 0.963 0.96<br>
-Long run effect: 35.587 19.599 21.24 22.008<br>
-Effect after 25 years: 17.791 13.8 16.895 17.715<br>
-Observations 6,790 6,642 6,336 5,688<br>
-=========================================================================================================================== Note: The reported coefficient on democracy is multiplied by 100. Replication of Table 2 in ANRR (2019)</p>
+<tr>
+<td style="text-align:left">
+Democracy
+</td>
+<td>
+0.973<sup>***</sup>
+</td>
+<td>
+0.651<sup>***</sup>
+</td>
+<td>
+0.787<sup>***</sup>
+</td>
+<td>
+0.887<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.240)
+</td>
+<td>
+(0.229)
+</td>
+<td>
+(0.228)
+</td>
+<td>
+(0.239)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+lag1
+</td>
+<td>
+0.973<sup>***</sup>
+</td>
+<td>
+1.266<sup>***</sup>
+</td>
+<td>
+1.238<sup>***</sup>
+</td>
+<td>
+1.233<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.003)
+</td>
+<td>
+(0.012)
+</td>
+<td>
+(0.013)
+</td>
+<td>
+(0.013)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+lag2
+</td>
+<td>
+</td>
+<td>
+-0.300<sup>***</sup>
+</td>
+<td>
+-0.207<sup>***</sup>
+</td>
+<td>
+-0.214<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+(0.012)
+</td>
+<td>
+(0.020)
+</td>
+<td>
+(0.021)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+lag3
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+-0.026
+</td>
+<td>
+-0.021
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+(0.019)
+</td>
+<td>
+(0.021)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+lag4
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+-0.043<sup>***</sup>
+</td>
+<td>
+-0.039<sup>*</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+(0.012)
+</td>
+<td>
+(0.020)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+lag5
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+-0.019
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+(0.020)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="5" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Persistence:
+</td>
+<td>
+0.973
+</td>
+<td>
+0.967
+</td>
+<td>
+0.963
+</td>
+<td>
+0.96
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Long run effect:
+</td>
+<td>
+35.587
+</td>
+<td>
+19.599
+</td>
+<td>
+21.24
+</td>
+<td>
+22.008
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Effect after 25 years:
+</td>
+<td>
+17.791
+</td>
+<td>
+13.8
+</td>
+<td>
+16.895
+</td>
+<td>
+17.715
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+6,790
+</td>
+<td>
+6,642
+</td>
+<td>
+6,336
+</td>
+<td>
+5,688
+</td>
+</tr>
+<tr>
+<td colspan="5" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td colspan="4" style="text-align:right">
+The reported coefficient on democracy is multiplied by 100. Replication of Table 2 in ANRR (2019)
+</td>
+</tr>
+
+</tbody></table>
 <p>Save the table as a tex file</p>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">stargazer</span>(models, </span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">type =</span> <span class="st">"latex"</span>, <span class="co">#change to "text" for easy viewing in console</span></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">out =</span> <span class="st">"output/table_fe.tex"</span>,</span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">title =</span> <span class="st">"Effect of Democracy on (Log) GDP per Capita"</span>, <span class="co"># title</span></span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">dep.var.labels =</span> <span class="st">"Log GDP per Capita"</span>,  </span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">covariate.labels =</span> <span class="fu">c</span>(<span class="st">"Democracy"</span>),</span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>          <span class="at">omit.stat =</span> <span class="fu">c</span>(<span class="st">"ser"</span>, <span class="st">"f"</span>,<span class="st">"adj.rsq"</span>), </span>
-<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>          <span class="at">keep.stat =</span> <span class="fu">c</span>(<span class="st">"n"</span>, <span class="st">"N"</span>), <span class="co">#keep observations,</span></span>
-<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>          <span class="at">omit =</span> <span class="fu">c</span>(<span class="st">"lag6"</span>, <span class="st">"lag7"</span>, <span class="st">"lag8"</span>),</span>
-<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>          <span class="at">model.numbers =</span> <span class="cn">FALSE</span>, <span class="co"># remove model numbers (are the same as column labels)</span></span>
-<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>          <span class="at">column.labels =</span> <span class="fu">c</span>(<span class="st">"(1)"</span>, <span class="st">"(2)"</span>, <span class="st">"(3)"</span>, <span class="st">"(4)"</span>), <span class="co"># add column labels</span></span>
-<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>          <span class="at">add.lines =</span> <span class="fu">list</span>( <span class="co"># add lines for persistence, long run effect and effect after 25 years</span></span>
-<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>            <span class="fu">c</span>(<span class="st">"Persistence: "</span>, pers), </span>
-<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a>            <span class="fu">c</span>(<span class="st">"Long run effect: "</span>, lre),</span>
-<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a>            <span class="fu">c</span>(<span class="st">"Effect after 25 years: "</span>, eff_25)</span>
-<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a>            ),</span>
-<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a>          <span class="at">notes =</span> <span class="st">"The reported coefficient on democracy is multiplied by 100. Replication of Table 2 in ANRR (2019)"</span>,</span>
-<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a>          <span class="at">notes.append =</span> <span class="cn">FALSE</span> <span class="co"># add notes to the end of the table</span></span>
-<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a>          )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com % Date and time: Wed, Dec 06, 2023 - 17:38:45
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">stargazer</span>(models, </span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">type =</span> <span class="st">"latex"</span>, <span class="co">#change to "text" for easy viewing in console</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">out =</span> <span class="st">"output/table_fe.tex"</span>,</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">title =</span> <span class="st">"Effect of Democracy on (Log) GDP per Capita"</span>, <span class="co"># title</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">dep.var.labels =</span> <span class="st">"Log GDP per Capita"</span>,  </span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">covariate.labels =</span> <span class="fu">c</span>(<span class="st">"Democracy"</span>),</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>          <span class="at">omit.stat =</span> <span class="fu">c</span>(<span class="st">"ser"</span>, <span class="st">"f"</span>,<span class="st">"adj.rsq"</span>), </span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>          <span class="at">keep.stat =</span> <span class="fu">c</span>(<span class="st">"n"</span>, <span class="st">"N"</span>), <span class="co">#keep observations,</span></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>          <span class="at">omit =</span> <span class="fu">c</span>(<span class="st">"lag6"</span>, <span class="st">"lag7"</span>, <span class="st">"lag8"</span>),</span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>          <span class="at">model.numbers =</span> <span class="cn">FALSE</span>, <span class="co"># remove model numbers (are the same as column labels)</span></span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>          <span class="at">column.labels =</span> <span class="fu">c</span>(<span class="st">"(1)"</span>, <span class="st">"(2)"</span>, <span class="st">"(3)"</span>, <span class="st">"(4)"</span>), <span class="co"># add column labels</span></span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>          <span class="at">add.lines =</span> <span class="fu">list</span>( <span class="co"># add lines for persistence, long run effect and effect after 25 years</span></span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>            <span class="fu">c</span>(<span class="st">"Persistence: "</span>, pers), </span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a>            <span class="fu">c</span>(<span class="st">"Long run effect: "</span>, lre),</span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a>            <span class="fu">c</span>(<span class="st">"Effect after 25 years: "</span>, eff_25)</span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a>            ),</span>
+<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a>          <span class="at">notes =</span> <span class="st">"The reported coefficient on democracy is multiplied by 100. Replication of Table 2 in ANRR (2019)"</span>,</span>
+<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a>          <span class="at">notes.append =</span> <span class="cn">FALSE</span> <span class="co"># add notes to the end of the table</span></span>
+<span id="cb34-19"><a href="#cb34-19" aria-hidden="true" tabindex="-1"></a>          )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com % Date and time: Wed, Dec 06, 2023 - 17:54:37
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
