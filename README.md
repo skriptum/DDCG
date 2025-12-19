@@ -1,4 +1,4 @@
-# Empirical Economics with R
+# Empirical Economics with R (Halle)
 
 Replication Files for the "**Does Democracy Cause Growth**" Paper by Acemoglu et al (2019). 
 
